@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B5B9EE923F634951B340F7 /* libPods-BRStretchScrollHeader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931828E73B2CE3DF528A47C /* libPods-BRStretchScrollHeader.a */; };
+		6623F2D61DFAF94A00E6971F /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6623F2D41DFAF94A00E6971F /* NextViewController.m */; };
+		6623F2D71DFAF94A00E6971F /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2D51DFAF94A00E6971F /* NextViewController.xib */; };
+		6623F2DD1DFBF5F400E6971F /* main_set_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */; };
 		662DC2CA1DFAE69300DCB56D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2C91DFAE69200DCB56D /* main.m */; };
 		662DC2CD1DFAE69300DCB56D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2CC1DFAE69300DCB56D /* AppDelegate.m */; };
 		662DC2D01DFAE69300DCB56D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2CF1DFAE69300DCB56D /* ViewController.m */; };
 		662DC2D31DFAE69300DCB56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662DC2D11DFAE69300DCB56D /* Main.storyboard */; };
 		662DC2D51DFAE69300DCB56D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662DC2D41DFAE69300DCB56D /* Assets.xcassets */; };
 		662DC2D81DFAE69300DCB56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662DC2D61DFAE69300DCB56D /* LaunchScreen.storyboard */; };
+		662DC2E41DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2E21DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m */; };
+		662DC2E81DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2E71DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0931828E73B2CE3DF528A47C /* libPods-BRStretchScrollHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRStretchScrollHeader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6623F2D31DFAF94A00E6971F /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		6623F2D41DFAF94A00E6971F /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		6623F2D51DFAF94A00E6971F /* NextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
+		6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_set_background@2x.png"; sourceTree = "<group>"; };
 		662DC2C51DFAE69200DCB56D /* BRStretchScrollHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRStretchScrollHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662DC2C91DFAE69200DCB56D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		662DC2CB1DFAE69300DCB56D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +37,13 @@
 		662DC2D41DFAE69300DCB56D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662DC2D71DFAE69300DCB56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662DC2D91DFAE69300DCB56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662DC2E11DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+BRStretchHeaderView.h"; sourceTree = "<group>"; };
+		662DC2E21DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+BRStretchHeaderView.m"; sourceTree = "<group>"; };
+		662DC2E51DFAEEFB00DCB56D /* BRStretchScrollHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStretchScrollHeader.h; sourceTree = "<group>"; };
+		662DC2E61DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BRStretchHeaderView.h"; sourceTree = "<group>"; };
+		662DC2E71DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BRStretchHeaderView.m"; sourceTree = "<group>"; };
+		671BA8F7534525E24E17E898 /* Pods-BRStretchScrollHeader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRStretchScrollHeader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRStretchScrollHeader/Pods-BRStretchScrollHeader.debug.xcconfig"; sourceTree = "<group>"; };
+		FDC503BDB712B47F1388579B /* Pods-BRStretchScrollHeader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRStretchScrollHeader.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRStretchScrollHeader/Pods-BRStretchScrollHeader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B5B9EE923F634951B340F7 /* libPods-BRStretchScrollHeader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +63,8 @@
 			children = (
 				662DC2C71DFAE69200DCB56D /* BRStretchScrollHeader */,
 				662DC2C61DFAE69200DCB56D /* Products */,
+				D819435C3720B1C4DBA49348 /* Pods */,
+				875F9092DCEEA58D99408996 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +79,14 @@
 		662DC2C71DFAE69200DCB56D /* BRStretchScrollHeader */ = {
 			isa = PBXGroup;
 			children = (
+				662DC2DF1DFAE71100DCB56D /* BRStretchScrollHeader */,
 				662DC2CB1DFAE69300DCB56D /* AppDelegate.h */,
 				662DC2CC1DFAE69300DCB56D /* AppDelegate.m */,
 				662DC2CE1DFAE69300DCB56D /* ViewController.h */,
 				662DC2CF1DFAE69300DCB56D /* ViewController.m */,
+				6623F2D31DFAF94A00E6971F /* NextViewController.h */,
+				6623F2D41DFAF94A00E6971F /* NextViewController.m */,
+				6623F2D51DFAF94A00E6971F /* NextViewController.xib */,
 				662DC2D11DFAE69300DCB56D /* Main.storyboard */,
 				662DC2D41DFAE69300DCB56D /* Assets.xcassets */,
 				662DC2D61DFAE69300DCB56D /* LaunchScreen.storyboard */,
@@ -79,6 +104,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		662DC2DF1DFAE71100DCB56D /* BRStretchScrollHeader */ = {
+			isa = PBXGroup;
+			children = (
+				6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */,
+				662DC2E51DFAEEFB00DCB56D /* BRStretchScrollHeader.h */,
+				662DC2E11DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.h */,
+				662DC2E21DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m */,
+				662DC2E61DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.h */,
+				662DC2E71DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m */,
+			);
+			path = BRStretchScrollHeader;
+			sourceTree = "<group>";
+		};
+		875F9092DCEEA58D99408996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0931828E73B2CE3DF528A47C /* libPods-BRStretchScrollHeader.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D819435C3720B1C4DBA49348 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				671BA8F7534525E24E17E898 /* Pods-BRStretchScrollHeader.debug.xcconfig */,
+				FDC503BDB712B47F1388579B /* Pods-BRStretchScrollHeader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 662DC2DC1DFAE69300DCB56D /* Build configuration list for PBXNativeTarget "BRStretchScrollHeader" */;
 			buildPhases = (
+				91872575FAD3411D0CBB7755 /* [CP] Check Pods Manifest.lock */,
 				662DC2C11DFAE69200DCB56D /* Sources */,
 				662DC2C21DFAE69200DCB56D /* Frameworks */,
 				662DC2C31DFAE69200DCB56D /* Resources */,
+				C1C2B35576C9511B8F4E1EE4 /* [CP] Embed Pods Frameworks */,
+				A7E94518A18E2FF0B3945DA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,18 +197,71 @@
 			files = (
 				662DC2D81DFAE69300DCB56D /* LaunchScreen.storyboard in Resources */,
 				662DC2D51DFAE69300DCB56D /* Assets.xcassets in Resources */,
+				6623F2DD1DFBF5F400E6971F /* main_set_background@2x.png in Resources */,
 				662DC2D31DFAE69300DCB56D /* Main.storyboard in Resources */,
+				6623F2D71DFAF94A00E6971F /* NextViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91872575FAD3411D0CBB7755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7E94518A18E2FF0B3945DA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRStretchScrollHeader/Pods-BRStretchScrollHeader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1C2B35576C9511B8F4E1EE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRStretchScrollHeader/Pods-BRStretchScrollHeader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		662DC2C11DFAE69200DCB56D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662DC2E81DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m in Sources */,
+				6623F2D61DFAF94A00E6971F /* NextViewController.m in Sources */,
 				662DC2D01DFAE69300DCB56D /* ViewController.m in Sources */,
+				662DC2E41DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m in Sources */,
 				662DC2CD1DFAE69300DCB56D /* AppDelegate.m in Sources */,
 				662DC2CA1DFAE69300DCB56D /* main.m in Sources */,
 			);
@@ -268,6 +379,7 @@
 		};
 		662DC2DD1DFAE69300DCB56D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671BA8F7534525E24E17E898 /* Pods-BRStretchScrollHeader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BRStretchScrollHeader/Info.plist;
@@ -279,6 +391,7 @@
 		};
 		662DC2DE1DFAE69300DCB56D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC503BDB712B47F1388579B /* Pods-BRStretchScrollHeader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BRStretchScrollHeader/Info.plist;
@@ -307,6 +420,7 @@
 				662DC2DE1DFAE69300DCB56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

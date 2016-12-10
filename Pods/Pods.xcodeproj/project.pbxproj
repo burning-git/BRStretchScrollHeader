@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		079BF11439620A9D210689A34793DA63 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBBA0829755BBE3EC59B170A7EAC0D /* UINavigationBar+Awesome.m */; };
+		51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 849A62A863923305ED1A8974CE57240C /* FDFullscreenPopGesture-dummy.m */; };
+		6366F82CD51F31D0756F1598D587F4A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CCFFE4060AC0E5BEF0E59AB7AA047C /* UINavigationController+FDFullscreenPopGesture.m */; };
+		8CCA0F220BDEF6F173780D57D3EF2577 /* Pods-BRStretchScrollHeader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB7DE682460C76B68CACFC3E77F70A /* Pods-BRStretchScrollHeader-dummy.m */; };
+		9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A402F2A6BD7DBC905CE9943F42FF25B /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C19916FCA04F5EF32134417B3AAD29EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C4A9383F7FEC12BB7C07FB2E27985298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C8BBDE467602360531519CA0714934B1 /* LTNavigationBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D394EBCC72663C8D3CB674250661EB99 /* LTNavigationBar-dummy.m */; };
+		EE71E96199FE2223FD6E7E01CA4AC738 /* UINavigationBar+Awesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 733B6137D975BC997AD1BE0F8A49FADB /* UINavigationBar+Awesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		131661D8ECF38F4D2936F0C8E0E20A4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81A311CB0A706632BB274E94C0FC99D2;
+			remoteInfo = LTNavigationBar;
+		};
+		D1DEA89CD887FAAE8774A8C972AE2C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71DE0FB8A6E5BB6EAF9FB037D799CC;
+			remoteInfo = FDFullscreenPopGesture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07A78D261CD8B82665B54ABF82AC7380 /* LTNavigationBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTNavigationBar.xcconfig; sourceTree = "<group>"; };
+		07CCFFE4060AC0E5BEF0E59AB7AA047C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		3AD2CE22706534CB07F4877B5A32709D /* Pods-BRStretchScrollHeader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BRStretchScrollHeader-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3DDBBA0829755BBE3EC59B170A7EAC0D /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Awesome.m"; path = "LTNavigationBar/UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		433C8D587BFFCBD0FD075578C57CDCF9 /* LTNavigationBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTNavigationBar-prefix.pch"; sourceTree = "<group>"; };
+		5A402F2A6BD7DBC905CE9943F42FF25B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		5BB081B5AFDB265F9BCEFB4B2E389480 /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
+		6353E8E45B9307C03E2C22395F2EB054 /* libLTNavigationBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLTNavigationBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF6735B8FF05AC712506B8D4E7905D2 /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		733B6137D975BC997AD1BE0F8A49FADB /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+Awesome.h"; path = "LTNavigationBar/UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		849A62A863923305ED1A8974CE57240C /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		8E133F5805C239D37EC84C22F6308C83 /* Pods-BRStretchScrollHeader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BRStretchScrollHeader-acknowledgements.plist"; sourceTree = "<group>"; };
+		93599D5A32F6FBBC976EE769B36B7E60 /* libPods-BRStretchScrollHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRStretchScrollHeader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A6222C4708475B6B725A374151C7C01 /* Pods-BRStretchScrollHeader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRStretchScrollHeader.release.xcconfig"; sourceTree = "<group>"; };
+		BCF884E7D895DD78F71B460468D7AAF4 /* Pods-BRStretchScrollHeader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BRStretchScrollHeader.debug.xcconfig"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CEDB7DE682460C76B68CACFC3E77F70A /* Pods-BRStretchScrollHeader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BRStretchScrollHeader-dummy.m"; sourceTree = "<group>"; };
+		D394EBCC72663C8D3CB674250661EB99 /* LTNavigationBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTNavigationBar-dummy.m"; sourceTree = "<group>"; };
+		DD0B36869F173BB3D92BA7160D7F12D6 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
+		DD0EF6601F52A4E5824C7697E9985C74 /* Pods-BRStretchScrollHeader-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRStretchScrollHeader-resources.sh"; sourceTree = "<group>"; };
+		E4C48E3BB8222D68D77C0CC8C6FF72F7 /* Pods-BRStretchScrollHeader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BRStretchScrollHeader-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92832CC15EC8F88715E0ACD6FC5A270C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19916FCA04F5EF32134417B3AAD29EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF277CFF3871600623A9BD3DD9917447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A9383F7FEC12BB7C07FB2E27985298 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BEC42B1A4F70D044E19B4D5C085C81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6366F82CD51F31D0756F1598D587F4A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		247820596E7B528D62E8D0F9F541CADB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD0B36869F173BB3D92BA7160D7F12D6 /* FDFullscreenPopGesture.xcconfig */,
+				849A62A863923305ED1A8974CE57240C /* FDFullscreenPopGesture-dummy.m */,
+				5BB081B5AFDB265F9BCEFB4B2E389480 /* FDFullscreenPopGesture-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FDFullscreenPopGesture";
+			sourceTree = "<group>";
+		};
+		3D590222E4F2829AD50FCAE07D9FEF1B /* LTNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				733B6137D975BC997AD1BE0F8A49FADB /* UINavigationBar+Awesome.h */,
+				3DDBBA0829755BBE3EC59B170A7EAC0D /* UINavigationBar+Awesome.m */,
+				FC1232F2AEE4DC16EFC68CF8BF14765A /* Support Files */,
+			);
+			path = LTNavigationBar;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4C45FFB6A4602EBA44130C333807ADCC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				94BA6137B304926736E8BF7D1EDB1017 /* Pods-BRStretchScrollHeader */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C9F285023F587BB27EC619C94FB69712 /* Pods */,
+				A010F21E2845B5DA0C42842A07C58E53 /* Products */,
+				4C45FFB6A4602EBA44130C333807ADCC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		94BA6137B304926736E8BF7D1EDB1017 /* Pods-BRStretchScrollHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3AD2CE22706534CB07F4877B5A32709D /* Pods-BRStretchScrollHeader-acknowledgements.markdown */,
+				8E133F5805C239D37EC84C22F6308C83 /* Pods-BRStretchScrollHeader-acknowledgements.plist */,
+				CEDB7DE682460C76B68CACFC3E77F70A /* Pods-BRStretchScrollHeader-dummy.m */,
+				E4C48E3BB8222D68D77C0CC8C6FF72F7 /* Pods-BRStretchScrollHeader-frameworks.sh */,
+				DD0EF6601F52A4E5824C7697E9985C74 /* Pods-BRStretchScrollHeader-resources.sh */,
+				BCF884E7D895DD78F71B460468D7AAF4 /* Pods-BRStretchScrollHeader.debug.xcconfig */,
+				9A6222C4708475B6B725A374151C7C01 /* Pods-BRStretchScrollHeader.release.xcconfig */,
+			);
+			name = "Pods-BRStretchScrollHeader";
+			path = "Target Support Files/Pods-BRStretchScrollHeader";
+			sourceTree = "<group>";
+		};
+		9EC0C3B3FE29C7D2AA00D1DA8458DBB8 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				5A402F2A6BD7DBC905CE9943F42FF25B /* UINavigationController+FDFullscreenPopGesture.h */,
+				07CCFFE4060AC0E5BEF0E59AB7AA047C /* UINavigationController+FDFullscreenPopGesture.m */,
+				247820596E7B528D62E8D0F9F541CADB /* Support Files */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		A010F21E2845B5DA0C42842A07C58E53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AF6735B8FF05AC712506B8D4E7905D2 /* libFDFullscreenPopGesture.a */,
+				6353E8E45B9307C03E2C22395F2EB054 /* libLTNavigationBar.a */,
+				93599D5A32F6FBBC976EE769B36B7E60 /* libPods-BRStretchScrollHeader.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9F285023F587BB27EC619C94FB69712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EC0C3B3FE29C7D2AA00D1DA8458DBB8 /* FDFullscreenPopGesture */,
+				3D590222E4F2829AD50FCAE07D9FEF1B /* LTNavigationBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC1232F2AEE4DC16EFC68CF8BF14765A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A78D261CD8B82665B54ABF82AC7380 /* LTNavigationBar.xcconfig */,
+				D394EBCC72663C8D3CB674250661EB99 /* LTNavigationBar-dummy.m */,
+				433C8D587BFFCBD0FD075578C57CDCF9 /* LTNavigationBar-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LTNavigationBar";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11660A4AA06371948BA52E228E12D47F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEF4D50F6317F0062CE5E2950497AD5 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FFDCE93FC08BFE48B5E4006101113E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE71E96199FE2223FD6E7E01CA4AC738 /* UINavigationBar+Awesome.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEB8E05E380A5AFADB7A5465E8055C85 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
+			buildPhases = (
+				0FA965BFF347F0200F43561762BB0754 /* Sources */,
+				BF277CFF3871600623A9BD3DD9917447 /* Frameworks */,
+				11660A4AA06371948BA52E228E12D47F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FDFullscreenPopGesture;
+			productName = FDFullscreenPopGesture;
+			productReference = 6AF6735B8FF05AC712506B8D4E7905D2 /* libFDFullscreenPopGesture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		81A311CB0A706632BB274E94C0FC99D2 /* LTNavigationBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79C80119EE9BD7473FD8F3BA4A33E1F9 /* Build configuration list for PBXNativeTarget "LTNavigationBar" */;
+			buildPhases = (
+				520E8698D36361B0683CE2DC60DB6A09 /* Sources */,
+				E3BEC42B1A4F70D044E19B4D5C085C81 /* Frameworks */,
+				F2FFDCE93FC08BFE48B5E4006101113E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTNavigationBar;
+			productName = LTNavigationBar;
+			productReference = 6353E8E45B9307C03E2C22395F2EB054 /* libLTNavigationBar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BA9DC075E981F78E9FC7931537195B9F /* Pods-BRStretchScrollHeader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F150645CA85688AE30AA6D3073C81A83 /* Build configuration list for PBXNativeTarget "Pods-BRStretchScrollHeader" */;
+			buildPhases = (
+				EF58B8F10F860D90E0E7CEC01ED9AC0B /* Sources */,
+				92832CC15EC8F88715E0ACD6FC5A270C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				720FA9A4F906DB2737AA096AB96BA70E /* PBXTargetDependency */,
+				A9DF042828CB73D14017B746AF1DE88D /* PBXTargetDependency */,
+			);
+			name = "Pods-BRStretchScrollHeader";
+			productName = "Pods-BRStretchScrollHeader";
+			productReference = 93599D5A32F6FBBC976EE769B36B7E60 /* libPods-BRStretchScrollHeader.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A010F21E2845B5DA0C42842A07C58E53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */,
+				81A311CB0A706632BB274E94C0FC99D2 /* LTNavigationBar */,
+				BA9DC075E981F78E9FC7931537195B9F /* Pods-BRStretchScrollHeader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FA965BFF347F0200F43561762BB0754 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51BB560DB48D81C168E6ED4F066E4956 /* FDFullscreenPopGesture-dummy.m in Sources */,
+				7EB0DD10FF07F928FF4C1F457259DB3A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		520E8698D36361B0683CE2DC60DB6A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BBDE467602360531519CA0714934B1 /* LTNavigationBar-dummy.m in Sources */,
+				079BF11439620A9D210689A34793DA63 /* UINavigationBar+Awesome.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF58B8F10F860D90E0E7CEC01ED9AC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCA0F220BDEF6F173780D57D3EF2577 /* Pods-BRStretchScrollHeader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		720FA9A4F906DB2737AA096AB96BA70E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 2C71DE0FB8A6E5BB6EAF9FB037D799CC /* FDFullscreenPopGesture */;
+			targetProxy = D1DEA89CD887FAAE8774A8C972AE2C4B /* PBXContainerItemProxy */;
+		};
+		A9DF042828CB73D14017B746AF1DE88D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTNavigationBar;
+			target = 81A311CB0A706632BB274E94C0FC99D2 /* LTNavigationBar */;
+			targetProxy = 131661D8ECF38F4D2936F0C8E0E20A4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EF6F9F210553E0B681BC647A920CF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A78D261CD8B82665B54ABF82AC7380 /* LTNavigationBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LTNavigationBar/LTNavigationBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56039D90DBD1D77B80D1C10018FBB50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0B36869F173BB3D92BA7160D7F12D6 /* FDFullscreenPopGesture.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		718D1AE586D5604B4D8851AE1BD4F7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A78D261CD8B82665B54ABF82AC7380 /* LTNavigationBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LTNavigationBar/LTNavigationBar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C8165B5BABDFE8895162171B280AD261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0B36869F173BB3D92BA7160D7F12D6 /* FDFullscreenPopGesture.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D1D931D175CAD3A8ABC949A9F5983780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF884E7D895DD78F71B460468D7AAF4 /* Pods-BRStretchScrollHeader.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F2253506BADF4B1745FA84F9CACAAAA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6222C4708475B6B725A374151C7C01 /* Pods-BRStretchScrollHeader.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9439C22469D35336242DD983DB5C5F /* Debug */,
+				42287DDF97330524BA3EF220F0276DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79C80119EE9BD7473FD8F3BA4A33E1F9 /* Build configuration list for PBXNativeTarget "LTNavigationBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF6F9F210553E0B681BC647A920CF18 /* Debug */,
+				718D1AE586D5604B4D8851AE1BD4F7D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEB8E05E380A5AFADB7A5465E8055C85 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56039D90DBD1D77B80D1C10018FBB50E /* Debug */,
+				C8165B5BABDFE8895162171B280AD261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F150645CA85688AE30AA6D3073C81A83 /* Build configuration list for PBXNativeTarget "Pods-BRStretchScrollHeader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1D931D175CAD3A8ABC949A9F5983780 /* Debug */,
+				F2253506BADF4B1745FA84F9CACAAAA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
