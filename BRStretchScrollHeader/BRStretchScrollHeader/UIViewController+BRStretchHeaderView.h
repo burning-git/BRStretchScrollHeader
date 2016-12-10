@@ -30,6 +30,13 @@ typedef NS_ENUM(NSUInteger, kBRViewControllerStretchHeaderViewNavBarStatus) {
 @property (nonatomic, strong , readonly) UINavigationItem *br_navigationItem;
 @property (nonatomic, assign , readonly) kBRViewControllerStretchHeaderViewNavBarStatus navBarStatus;
 
+
+/**
+ 设置背景颜色 navBar
+
+ @param bgColor <#bgColor description#>
+ */
+- (void)BR_setNavBarBackgroundColor:(UIColor *)bgColor;
 /**
  viewController 增加 BRStretchHeaderView
 

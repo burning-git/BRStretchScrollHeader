@@ -10,7 +10,8 @@
 		14B5B9EE923F634951B340F7 /* libPods-BRStretchScrollHeader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931828E73B2CE3DF528A47C /* libPods-BRStretchScrollHeader.a */; };
 		6623F2D61DFAF94A00E6971F /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6623F2D41DFAF94A00E6971F /* NextViewController.m */; };
 		6623F2D71DFAF94A00E6971F /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2D51DFAF94A00E6971F /* NextViewController.xib */; };
-		6623F2DD1DFBF5F400E6971F /* main_set_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */; };
+		6623F2E11DFC01C600E6971F /* main_set_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2DF1DFC01C600E6971F /* main_set_background@2x.png */; };
+		6623F2E21DFC01C600E6971F /* StretchScollHeader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6623F2E01DFC01C600E6971F /* StretchScollHeader.gif */; };
 		662DC2CA1DFAE69300DCB56D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2C91DFAE69200DCB56D /* main.m */; };
 		662DC2CD1DFAE69300DCB56D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2CC1DFAE69300DCB56D /* AppDelegate.m */; };
 		662DC2D01DFAE69300DCB56D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DC2CF1DFAE69300DCB56D /* ViewController.m */; };
@@ -26,7 +27,8 @@
 		6623F2D31DFAF94A00E6971F /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		6623F2D41DFAF94A00E6971F /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		6623F2D51DFAF94A00E6971F /* NextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
-		6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_set_background@2x.png"; sourceTree = "<group>"; };
+		6623F2DF1DFC01C600E6971F /* main_set_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_set_background@2x.png"; sourceTree = "<group>"; };
+		6623F2E01DFC01C600E6971F /* StretchScollHeader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = StretchScollHeader.gif; sourceTree = "<group>"; };
 		662DC2C51DFAE69200DCB56D /* BRStretchScrollHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRStretchScrollHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662DC2C91DFAE69200DCB56D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		662DC2CB1DFAE69300DCB56D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6623F2DE1DFC01C600E6971F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6623F2DF1DFC01C600E6971F /* main_set_background@2x.png */,
+				6623F2E01DFC01C600E6971F /* StretchScollHeader.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		662DC2BC1DFAE69200DCB56D = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +90,7 @@
 		662DC2C71DFAE69200DCB56D /* BRStretchScrollHeader */ = {
 			isa = PBXGroup;
 			children = (
+				6623F2DE1DFC01C600E6971F /* Resources */,
 				662DC2DF1DFAE71100DCB56D /* BRStretchScrollHeader */,
 				662DC2CB1DFAE69300DCB56D /* AppDelegate.h */,
 				662DC2CC1DFAE69300DCB56D /* AppDelegate.m */,
@@ -107,7 +119,6 @@
 		662DC2DF1DFAE71100DCB56D /* BRStretchScrollHeader */ = {
 			isa = PBXGroup;
 			children = (
-				6623F2DC1DFBF5F400E6971F /* main_set_background@2x.png */,
 				662DC2E51DFAEEFB00DCB56D /* BRStretchScrollHeader.h */,
 				662DC2E11DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.h */,
 				662DC2E21DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m */,
@@ -197,9 +208,10 @@
 			files = (
 				662DC2D81DFAE69300DCB56D /* LaunchScreen.storyboard in Resources */,
 				662DC2D51DFAE69300DCB56D /* Assets.xcassets in Resources */,
-				6623F2DD1DFBF5F400E6971F /* main_set_background@2x.png in Resources */,
+				6623F2E11DFC01C600E6971F /* main_set_background@2x.png in Resources */,
 				662DC2D31DFAE69300DCB56D /* Main.storyboard in Resources */,
 				6623F2D71DFAF94A00E6971F /* NextViewController.xib in Resources */,
+				6623F2E21DFC01C600E6971F /* StretchScollHeader.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

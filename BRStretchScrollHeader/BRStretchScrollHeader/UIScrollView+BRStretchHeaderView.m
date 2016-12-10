@@ -41,7 +41,7 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 }
 - (void)br_dealloc
 {
-    NSLog(@"内存释放--%@",NSStringFromClass([self class]) );
+   // NSLog(@"内存释放--%@",NSStringFromClass([self class]) );
     [[NSNotificationCenter defaultCenter]removeObserver:self];
     [self removeObserver:self forKeyPath:kBRcontentOffsetY];
 
@@ -82,17 +82,13 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 - (void)br_scrollViewDidScroll:(UIScrollView*)scrollView {
     
     CGFloat yOffset  = scrollView.contentOffset.y;
-    CGFloat xOffset = yOffset;
     yOffset += self.contentInset.top;//因为偏移了 header的高度
     
     UIView *headerView = [scrollView viewWithTag:1000];
     if (yOffset <= 0 ) {
         
         CGRect newFrame = CGRectMake(yOffset, self.beforeFrame.origin.y + yOffset , self.beforeFrame.size.width + fabs(yOffset)*2, self.beforeFrame.size.height + fabs(yOffset));
-        NSLog(@"-----mmm%f---frame %@",yOffset,NSStringFromCGRect(newFrame));
-        if (yOffset == 0) {
-            NSLog(@"======0");
-        }
+
         headerView.frame = newFrame;
         
     }

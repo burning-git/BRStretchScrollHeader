@@ -19,6 +19,9 @@ static NSString *kBRCustomNavigationStatusKey = @"kBRCustomNavigationStatusKey";
 //自定义滑动改变事件导航栏
 static NSString *kBRCustomNavigationCustomChangedKey = @"kBRCustomNavigationCustomChangedKey";
 
+static NSString *kBRCustomNavigationBgColorKey = @"kBRCustomNavigationBgColorKey";
+
+
 const NSInteger kBR_NavHeight = 64.0;
 
 @interface UIViewController()
@@ -27,6 +30,7 @@ const NSInteger kBR_NavHeight = 64.0;
 
 @property (nonatomic ,copy) void(^customEventChangeBlcok)(CGPoint point,UIScrollView *scrollView);
 
+@property (nonatomic ,strong ) UIColor *br_navBarBgColor;
 @end
 
 @implementation UIViewController (BRStretchHeaderView)
@@ -37,6 +41,7 @@ const NSInteger kBR_NavHeight = 64.0;
 /*FIXME:  viewController 增加 BRStretchHeaderView */
 - (void)BR_addVCStrechHeaderView:(UIView *)headerView InTablewView:(UITableView *)tablew {
     
+    self.br_navBarBgColor = self.br_navBarBgColor ?:[UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.fd_prefersNavigationBarHidden = YES;
 #pragma clang diagnostic push
@@ -78,6 +83,14 @@ const NSInteger kBR_NavHeight = 64.0;
 /*FIXME:  自定义滑动变化事件, 覆盖自带的滑动改变处理事件 */
 - (void)BR_addCustomScrollEventBlock:(void (^)(CGPoint, UIScrollView *))block {
     
+    self.customEventChangeBlcok = block;
+}
+
+/*FIXME:  设置背景颜色 navBar */
+- (void)BR_setNavBarBackgroundColor:(UIColor *)bgColor {
+    
+    self.br_navBarBgColor = bgColor;
+    
 }
 
 /*FIXME: 透明度变化 */
@@ -89,12 +102,12 @@ const NSInteger kBR_NavHeight = 64.0;
     }
     else {
         CGFloat NAVBAR_CHANGE_POINT = scrollView.br_headerViewHeight;
-        UIColor * color = [UIColor redColor];
+        UIColor * color = self.br_navBarBgColor;
         CGFloat offsetY = scrollView.contentOffset.y ;
         CGFloat alpha = 0;
         if (offsetY >  kBR_NavHeight-NAVBAR_CHANGE_POINT) {
              alpha = MIN(1, (offsetY + (NAVBAR_CHANGE_POINT - kBR_NavHeight))/NAVBAR_CHANGE_POINT);
-            NSLog(@"-----aplha %f",alpha);
+            
             if ( alpha > 0 && alpha < 1.0) {
                 
                 self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
@@ -168,6 +181,14 @@ const NSInteger kBR_NavHeight = 64.0;
 
 }
 
+- (UIColor *)br_navBarBgColor {
+    return objc_getAssociatedObject(self, &kBRCustomNavigationBgColorKey);
+    
+}
+- (void)setBr_navBarBgColor:(UIColor *)br_navBarBgColor {
+    objc_setAssociatedObject(self,&kBRCustomNavigationBgColorKey, br_navBarBgColor, OBJC_ASSOCIATION_RETAIN);
+
+}
 
 
 

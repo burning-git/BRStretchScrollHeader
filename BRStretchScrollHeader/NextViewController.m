@@ -25,12 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self BR_setNavBarBackgroundColor:[UIColor redColor]];
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
     headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"main_set_background"]];
     self.navigationItem.title = @"你好";
     [self BR_addVCStrechHeaderView:headerView InTablewView:_tablew];
     
-    UIBarButtonItem *letf = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:nil action:nil];
+    UIBarButtonItem *letf = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(dismiss)];
     
     self.br_navigationItem.leftBarButtonItem = letf;
     
@@ -48,6 +49,11 @@
     
 }
 
+- (void)dismiss{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 - (UIStatusBarStyle)preferredStatusBarStyle {
     
     if (self.navBarStatus != kBRViewControllerStretchHeaderViewNavBarStatus_NotShow) {
