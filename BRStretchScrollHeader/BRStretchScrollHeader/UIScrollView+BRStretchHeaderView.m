@@ -37,15 +37,15 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 
     });
     
-    
 }
 - (void)br_dealloc
 {
-   // NSLog(@"内存释放--%@",NSStringFromClass([self class]) );
     [[NSNotificationCenter defaultCenter]removeObserver:self];
     [self removeObserver:self forKeyPath:kBRcontentOffsetY];
 
 }
+
+
 
 - (void)BR_addStrechHeaderView:(UIView *)headerView {
     
@@ -92,8 +92,8 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
         headerView.frame = newFrame;
         
     }
-    
     if (self.blocksArray.count > 0) {
+        
         [self.blocksArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
             void(^blcok)(CGPoint point,UIScrollView *scrol) = obj;
@@ -112,14 +112,10 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
     if (!self.blocksArray) {
         self.blocksArray = [NSMutableArray arrayWithCapacity:0];
     }
-    
     if (![self.blocksArray containsObject:block]) {
         [self.blocksArray addObject:block];
     }
 }
-
-
-
 
 #pragma mark --- setter
 

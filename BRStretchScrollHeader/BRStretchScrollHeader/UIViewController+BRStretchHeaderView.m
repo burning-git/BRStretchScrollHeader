@@ -56,8 +56,7 @@ const NSInteger kBR_NavHeight = 64.0;
     [nav setItems:@[br_navigationItem]];
     self.br_navigationItem = br_navigationItem;
     [self.view addSubview:nav];
-//    [nav setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-   [nav setShadowImage:[UIImage new]];
+    [nav setShadowImage:[UIImage new]];
     self.br_navBar = nav;
     
     //设置透明
@@ -106,17 +105,18 @@ const NSInteger kBR_NavHeight = 64.0;
         CGFloat offsetY = scrollView.contentOffset.y ;
         CGFloat alpha = 0;
         if (offsetY >  kBR_NavHeight-NAVBAR_CHANGE_POINT) {
-             alpha = MIN(1, (offsetY + (NAVBAR_CHANGE_POINT - kBR_NavHeight))/NAVBAR_CHANGE_POINT);
             
+             alpha = MIN(1, (offsetY + (NAVBAR_CHANGE_POINT - kBR_NavHeight))/NAVBAR_CHANGE_POINT);
             if ( alpha > 0 && alpha < 1.0) {
-                
                 self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
             }
             else{
                 self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
             }
             [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+            
         } else {
+            
             [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
             self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_NotShow;
         }
@@ -169,7 +169,6 @@ const NSInteger kBR_NavHeight = 64.0;
 - (void)setAlphaBlcok:(void (^)(kBRViewControllerStretchHeaderViewNavBarStatus, CGFloat))alphaBlcok {
     
     objc_setAssociatedObject(self,&kBRCustomNavigationChangedBlcokKey, alphaBlcok, OBJC_ASSOCIATION_COPY);
-
 }
 
 - (void (^)(CGPoint, UIScrollView *))customEventChangeBlcok {
