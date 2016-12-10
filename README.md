@@ -37,3 +37,5 @@
 ### 效果
 
    ![图片加载](BRStretchScrollHeader/Resources/StretchScollHeader.gif)
+
+   ![源码链接](https://github.com/burning-git/BRStretchScrollHeader)
