@@ -24,9 +24,11 @@
     * 自定义滑动变化导航栏透明事件, 覆盖自带的滑动改变处理事件
     - (void)BR_addCustomScrollEventBlock:(void(^)(CGPoint point,UIScrollView *scrollView))block;
 
+### Pod 引入
 
     ** pod 引入 (如果没有搜索到 还未上传, ![试试](http://blog.cocoachina.com/article/29127))
     pod 'BRStretchHeader', '~> 0.1.0'
+  
 
 ### 其他
     项目中使用 
