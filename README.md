@@ -35,7 +35,9 @@
     pod 'LTNavigationBar', '~> 2.1.6'  (决绝了 导航栏自定义颜色)
     pod 'FDFullscreenPopGesture', '~> 1.1' (决绝了，隐藏导航栏，不导致全局都隐藏)  
     感谢🙏该对应的作者！！！！
-
+### 版本
+    0.1.0  ------- 项目版本
+    0.2.0  ------- 修改移除kvo 崩溃,并增加 header 滑动类型
 ### 效果
 
    ![图片加载](BRStretchScrollHeader/Resources/StretchScollHeader.gif)
