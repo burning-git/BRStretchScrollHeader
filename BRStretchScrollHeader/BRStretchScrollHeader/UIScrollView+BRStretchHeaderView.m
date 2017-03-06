@@ -17,9 +17,12 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 
 static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrechAutoFitFrameKey";
 
+static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHadAddKvoKey";
+
 @interface UIScrollView()
 @property (nonatomic, assign) CGRect beforeFrame;
 @property (nonatomic, strong) NSMutableArray *blocksArray;
+@property (nonatomic, assign) BOOL hadAddKvo;
 @end
 
 @implementation UIScrollView (BRStretchHeaderView)
@@ -44,17 +47,20 @@ static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrec
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
     
-  
-    @try {
-        
-        [self removeObserver:self forKeyPath:kBRcontentOffsetY];
+    if (self.hadAddKvo) {
+        @try {
+            
+            [self removeObserver:self forKeyPath:kBRcontentOffsetY];
+            
+        } @catch (NSException *exception) {
+            
+        } @finally {
+            
+        }
 
-    } @catch (NSException *exception) {
-        
-    } @finally {
-        
     }
-
+  
+  
 }
 
 
@@ -76,6 +82,7 @@ static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrec
 
         [self addObserver:self forKeyPath:kBRcontentOffsetY options:NSKeyValueObservingOptionNew context:nil];
         
+        self.hadAddKvo = YES;
     });
     
     self.br_headerViewHeight = frame.size.height;
@@ -173,6 +180,17 @@ static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrec
 }
 -(void)setBr_strechType:(BRStretchHeaderStrechType)br_strechType {
     objc_setAssociatedObject(self,&kBRTabelewHeaderStrechAutoFitFrameKey, @(br_strechType), OBJC_ASSOCIATION_ASSIGN);
+    
+}
+
+
+- (void)setHadAddKvo:(BOOL)hadAddKvo {
+    objc_setAssociatedObject(self,&kBRTabelewHeaderStrechHadAddKvoKey, @(hadAddKvo), OBJC_ASSOCIATION_ASSIGN);
+
+}
+- (BOOL)hadAddKvo {
+    NSNumber *number = objc_getAssociatedObject(self, &kBRTabelewHeaderStrechHadAddKvoKey);
+    return number.boolValue;
     
 }
 
