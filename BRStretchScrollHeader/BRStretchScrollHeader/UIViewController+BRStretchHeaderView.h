@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BRStretchScrollHeader.h"
-
-
-
+#import "BREnumHeader.h"
 
 /**
  导航栏 状态
@@ -30,7 +28,7 @@ typedef NS_ENUM(NSUInteger, kBRViewControllerStretchHeaderViewNavBarStatus) {
 @property (nonatomic, strong , readonly) UINavigationItem *br_navigationItem;
 @property (nonatomic, assign , readonly) kBRViewControllerStretchHeaderViewNavBarStatus navBarStatus;
 
-
+@property (nonatomic, assign) BRStretchHeaderStrechType br_strechType;
 /**
  设置背景颜色 navBar
 

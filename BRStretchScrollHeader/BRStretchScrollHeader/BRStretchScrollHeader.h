@@ -9,6 +9,7 @@
 #ifndef BRStretchScrollHeader_h
 #define BRStretchScrollHeader_h
 
+
 #ifdef __OBJC__
 
 #import <UIKit/UIKit.h>
@@ -16,7 +17,12 @@
 #import <LTNavigationBar/UINavigationBar+Awesome.h>
 #import "UIScrollView+BRStretchHeaderView.h"
 #import "UIViewController+BRStretchHeaderView.h"
+#import "BREnumHeader.h"
+
+
 #endif
+
+
 
 
 #endif /* BRStretchScrollHeader_h */

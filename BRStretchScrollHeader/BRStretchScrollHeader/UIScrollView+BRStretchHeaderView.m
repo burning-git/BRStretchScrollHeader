@@ -15,6 +15,8 @@ static NSString *kBRTabelewBeforeFrame = @"kBRTabelewBeforeFramekasldjaklsdjalks
 static NSString *kBRTabelewHeaderViewHeightKey = @"kBRTabelewHeaderViewHeightKey";
 static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderContentOffsetArrayKey";
 
+static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrechAutoFitFrameKey";
+
 @interface UIScrollView()
 @property (nonatomic, assign) CGRect beforeFrame;
 @property (nonatomic, strong) NSMutableArray *blocksArray;
@@ -41,7 +43,17 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 - (void)br_dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
-    [self removeObserver:self forKeyPath:kBRcontentOffsetY];
+    
+  
+    @try {
+        
+        [self removeObserver:self forKeyPath:kBRcontentOffsetY];
+
+    } @catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
 
 }
 
@@ -61,7 +73,7 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
     
     //这里延迟，因为 调用 setContentOffset 会 引起 kBRcontentOffsetY 的变化。
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+
         [self addObserver:self forKeyPath:kBRcontentOffsetY options:NSKeyValueObservingOptionNew context:nil];
         
     });
@@ -85,7 +97,7 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
     yOffset += self.contentInset.top;//因为偏移了 header的高度
     
     UIView *headerView = [scrollView viewWithTag:1000];
-    if (yOffset <= 0 ) {
+    if (yOffset <= 0  && self.br_strechType == BRStretchHeaderStrechType_Default) {
         
         CGRect newFrame = CGRectMake(yOffset, self.beforeFrame.origin.y + yOffset , self.beforeFrame.size.width + fabs(yOffset)*2, self.beforeFrame.size.height + fabs(yOffset));
 
@@ -152,5 +164,18 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
     objc_setAssociatedObject(self,&kBRTabelewBeforeFrame, [NSValue valueWithCGRect:beforeFrame], OBJC_ASSOCIATION_RETAIN);
     
 }
+
+-(BRStretchHeaderStrechType)br_strechType {
+    
+    NSNumber *number = objc_getAssociatedObject(self, &kBRTabelewHeaderStrechAutoFitFrameKey);
+    return  number.boolValue;
+    
+}
+-(void)setBr_strechType:(BRStretchHeaderStrechType)br_strechType {
+    objc_setAssociatedObject(self,&kBRTabelewHeaderStrechAutoFitFrameKey, @(br_strechType), OBJC_ASSOCIATION_ASSIGN);
+    
+}
+
+
 
 @end

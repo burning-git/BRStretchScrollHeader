@@ -27,7 +27,7 @@
     self.tablewView.tableFooterView = [UIView new];
     self.tablewView.tableHeaderView = [UIView new];
     
-    UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
     headerView.image = [UIImage imageNamed:@"main_set_background"];
     //headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"main_set_background"]];
     [self.tablewView BR_addStrechHeaderView:headerView];

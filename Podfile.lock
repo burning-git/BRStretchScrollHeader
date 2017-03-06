@@ -1,6 +1,6 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
-  - LTNavigationBar (2.1.6)
+  - LTNavigationBar (2.1.9)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
@@ -8,8 +8,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  LTNavigationBar: 9ef51488bf289b1f65dbcb17ac92888c4ae23e30
+  LTNavigationBar: c278785bed344862e18146b5f06792932e4feacc
 
-PODFILE CHECKSUM: 1ca6f4ec3ede65aec2798e3c564ea50e0bfbcfc6
+PODFILE CHECKSUM: ad796fe0f1c88303d64b1b93ba722717fdb4fac1
 
 COCOAPODS: 1.0.1

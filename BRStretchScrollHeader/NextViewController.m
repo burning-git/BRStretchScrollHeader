@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     [self BR_setNavBarBackgroundColor:[UIColor redColor]];
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
     headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"main_set_background"]];
     self.navigationItem.title = @"你好";
     [self BR_addVCStrechHeaderView:headerView InTablewView:_tablew];
@@ -43,6 +43,11 @@
        
         [self setNeedsStatusBarAppearanceUpdate];
     }];
+    
+    _tablew.br_strechType = BRStretchHeaderStrechType_NotStretchBegainScollNavAlpha;
+
+    self.br_strechType = _tablew.br_strechType;
+
    // UIView *overlay = [self.br_navBar valueForKey:@"overlay"];
    
     // Do any additional setup after loading the view from its nib.

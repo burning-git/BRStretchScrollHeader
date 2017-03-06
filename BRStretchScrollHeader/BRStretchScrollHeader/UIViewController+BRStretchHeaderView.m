@@ -20,6 +20,7 @@ static NSString *kBRCustomNavigationStatusKey = @"kBRCustomNavigationStatusKey";
 static NSString *kBRCustomNavigationCustomChangedKey = @"kBRCustomNavigationCustomChangedKey";
 
 static NSString *kBRCustomNavigationBgColorKey = @"kBRCustomNavigationBgColorKey";
+static NSString *kBRCustomNavigationStrechAutoFitFrameKey = @"kBRCustomNavigationStrechAutoFitFrameKey";
 
 
 const NSInteger kBR_NavHeight = 64.0;
@@ -41,6 +42,7 @@ const NSInteger kBR_NavHeight = 64.0;
 /*FIXME:  viewController 增加 BRStretchHeaderView */
 - (void)BR_addVCStrechHeaderView:(UIView *)headerView InTablewView:(UITableView *)tablew {
     
+
     self.br_navBarBgColor = self.br_navBarBgColor ?:[UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.fd_prefersNavigationBarHidden = YES;
@@ -49,6 +51,7 @@ const NSInteger kBR_NavHeight = 64.0;
     [self.navigationController performSelector:@selector(fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:) withObject:self];
 #pragma clang diagnostic pop
     
+    tablew.br_strechType = BRStretchHeaderStrechType_Default;
     [tablew BR_addStrechHeaderView:headerView];
     
     UINavigationBar *nav = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kBR_NavHeight)];
@@ -68,7 +71,6 @@ const NSInteger kBR_NavHeight = 64.0;
         
         [weakSelf br_scrollViewDidScroll:view];
     }];
-    
 }
 
 
@@ -104,9 +106,11 @@ const NSInteger kBR_NavHeight = 64.0;
         UIColor * color = self.br_navBarBgColor;
         CGFloat offsetY = scrollView.contentOffset.y ;
         CGFloat alpha = 0;
-        if (offsetY >  kBR_NavHeight-NAVBAR_CHANGE_POINT) {
+        
+        CGFloat topOffset = kBR_NavHeight-NAVBAR_CHANGE_POINT;
+        if (self.br_strechType == BRStretchHeaderStrechType_NotStretchBegainScollNavAlpha) {
             
-             alpha = MIN(1, (offsetY + (NAVBAR_CHANGE_POINT - kBR_NavHeight))/NAVBAR_CHANGE_POINT);
+            alpha = MIN(1, (offsetY + NAVBAR_CHANGE_POINT)/(fabs(NAVBAR_CHANGE_POINT)));
             if ( alpha > 0 && alpha < 1.0) {
                 self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
             }
@@ -114,13 +118,27 @@ const NSInteger kBR_NavHeight = 64.0;
                 self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
             }
             [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
-            
-        } else {
-            
-            [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
-            self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_NotShow;
+
         }
+        else {
+            if (offsetY > topOffset ) {
+                
+                alpha = MIN(1, (offsetY + (NAVBAR_CHANGE_POINT - kBR_NavHeight))/NAVBAR_CHANGE_POINT);
+                if ( alpha > 0 && alpha < 1.0) {
+                    self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
+                }
+                else{
+                    self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
+                }
+                [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+                
+            } else {
+                
+                [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+                self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_NotShow;
+            }
         
+        }
         if (self.alphaBlcok) {
             self.alphaBlcok(self.navBarStatus,alpha);
         }
@@ -188,6 +206,18 @@ const NSInteger kBR_NavHeight = 64.0;
     objc_setAssociatedObject(self,&kBRCustomNavigationBgColorKey, br_navBarBgColor, OBJC_ASSOCIATION_RETAIN);
 
 }
+
+-(BRStretchHeaderStrechType)br_strechType {
+    
+    NSNumber *number = objc_getAssociatedObject(self, &kBRCustomNavigationStrechAutoFitFrameKey);
+    return  number.boolValue;
+    
+}
+-(void)setBr_strechType:(BRStretchHeaderStrechType)br_strechType {
+    objc_setAssociatedObject(self,&kBRCustomNavigationStrechAutoFitFrameKey, @(br_strechType), OBJC_ASSOCIATION_ASSIGN);
+    
+}
+
 
 
 

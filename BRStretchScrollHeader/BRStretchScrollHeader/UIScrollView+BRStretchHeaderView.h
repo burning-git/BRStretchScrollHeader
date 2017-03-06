@@ -7,9 +7,14 @@
 //
 
 #import "BRStretchScrollHeader.h"
+#import "BREnumHeader.h"
 @interface UIScrollView (BRStretchHeaderView)
 
 @property (nonatomic, assign) CGFloat br_headerViewHeight;
+
+
+@property (nonatomic, assign ) BRStretchHeaderStrechType br_strechType;
+
 /**
  增加 stretchHeaderView （ps ，如果有偏移量是 64的话 ,请设置  viewController.automaticallyAdjustsScrollViewInsets = NO;）
 

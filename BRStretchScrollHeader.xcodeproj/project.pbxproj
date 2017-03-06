@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0931828E73B2CE3DF528A47C /* libPods-BRStretchScrollHeader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRStretchScrollHeader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		661CBF531E64731E0085AB30 /* BREnumHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BREnumHeader.h; sourceTree = "<group>"; };
 		6623F2D31DFAF94A00E6971F /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		6623F2D41DFAF94A00E6971F /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		6623F2D51DFAF94A00E6971F /* NextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 				662DC2E21DFAE71100DCB56D /* UIScrollView+BRStretchHeaderView.m */,
 				662DC2E61DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.h */,
 				662DC2E71DFAEF9B00DCB56D /* UIViewController+BRStretchHeaderView.m */,
+				661CBF531E64731E0085AB30 /* BREnumHeader.h */,
 			);
 			path = BRStretchScrollHeader;
 			sourceTree = "<group>";
