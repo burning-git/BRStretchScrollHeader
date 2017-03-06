@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BRStretchHeader"
-  s.version      = "0.4.0"
+  s.version      = "0.5.0"
   s.summary      = "一款 顶部视图跟随 滑动的变化而变化 视图工具"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/burning-git/BRStretchScrollHeader.git", :tag => "0.4.0" }
+  s.source       = { :git => "https://github.com/burning-git/BRStretchScrollHeader.git", :tag => "0.5.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
