@@ -44,9 +44,9 @@
         [self setNeedsStatusBarAppearanceUpdate];
     }];
     
-    _tablew.br_strechType = BRStretchHeaderStrechType_NotStretchBegainScollNavAlpha;
+   _tablew.br_strechType = BRStretchHeaderStrechType_NotStretchScollHeaderNavAlpha;
 
-    self.br_strechType = _tablew.br_strechType;
+    self.br_strechType = BRStretchHeaderStrechType_NotStretchScollHeaderNavAlpha;
 
    // UIView *overlay = [self.br_navBar valueForKey:@"overlay"];
    
@@ -61,7 +61,8 @@
 }
 - (UIStatusBarStyle)preferredStatusBarStyle {
     
-    if (self.navBarStatus != kBRViewControllerStretchHeaderViewNavBarStatus_NotShow) {
+    NSLog(@"%ld",self.navBarStatus);
+    if (self.navBarStatus == kBRViewControllerStretchHeaderViewNavBarStatus_NotShow) {
         
         return UIStatusBarStyleDefault;
     }

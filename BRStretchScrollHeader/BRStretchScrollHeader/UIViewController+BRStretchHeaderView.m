@@ -62,6 +62,14 @@ const NSInteger kBR_NavHeight = 64.0;
     [nav setShadowImage:[UIImage new]];
     self.br_navBar = nav;
     
+    //设置原来 nav 的属性
+    nav.tintColor = self.navigationController.navigationBar.tintColor;
+    nav.barTintColor = self.navigationController.navigationBar.barTintColor;
+    if (self.navigationController.navigationBar.titleTextAttributes.allKeys.count > 0) {
+        [nav setTitleTextAttributes:self.navigationController.navigationBar.titleTextAttributes];
+    }
+
+    
     //设置透明
     [self.br_navBar lt_setBackgroundColor:[UIColor clearColor]];
     self.br_navBar.clipsToBounds  = YES;
@@ -98,6 +106,7 @@ const NSInteger kBR_NavHeight = 64.0;
 - (void)br_scrollViewDidScroll:(UIScrollView *)scrollView {
     
     
+    NSLog(@"---%ld",self.br_strechType);
     if (self.customEventChangeBlcok) {
         self.customEventChangeBlcok(scrollView.contentOffset,scrollView);
     }
@@ -109,17 +118,26 @@ const NSInteger kBR_NavHeight = 64.0;
         
         CGFloat topOffset = kBR_NavHeight-NAVBAR_CHANGE_POINT;
         if (self.br_strechType == BRStretchHeaderStrechType_NotStretchBegainScollNavAlpha) {
-            
-            alpha = MIN(1, (offsetY + NAVBAR_CHANGE_POINT)/(fabs(NAVBAR_CHANGE_POINT)));
-            if ( alpha > 0 && alpha < 1.0) {
-                self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
+            topOffset = -NAVBAR_CHANGE_POINT;
+            if (offsetY > topOffset ) {
+                alpha = MIN(1, (offsetY + NAVBAR_CHANGE_POINT)/(fabs(NAVBAR_CHANGE_POINT)));
+                if ( alpha > 0 && alpha < 1.0) {
+                    
+                    self.navBarStatus =kBRViewControllerStretchHeaderViewNavBarStatus_WillShow;
+                }
+                else
+                    {
+                    
+                    self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
+                    }
             }
             else{
-                self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
+                
+                self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_NotShow;
             }
-            [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
 
         }
+        
         else {
             if (offsetY > topOffset ) {
                 
@@ -130,15 +148,17 @@ const NSInteger kBR_NavHeight = 64.0;
                 else{
                     self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_DidShow;
                 }
-                [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
                 
             } else {
                 
-                [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
                 self.navBarStatus = kBRViewControllerStretchHeaderViewNavBarStatus_NotShow;
             }
         
         }
+        [self.br_navBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+
+        
+        
         if (self.alphaBlcok) {
             self.alphaBlcok(self.navBarStatus,alpha);
         }
@@ -210,7 +230,7 @@ const NSInteger kBR_NavHeight = 64.0;
 -(BRStretchHeaderStrechType)br_strechType {
     
     NSNumber *number = objc_getAssociatedObject(self, &kBRCustomNavigationStrechAutoFitFrameKey);
-    return  number.boolValue;
+    return  number.integerValue;
     
 }
 -(void)setBr_strechType:(BRStretchHeaderStrechType)br_strechType {

@@ -18,6 +18,7 @@ static NSString *kBRTabelewHeaderContentOffsetArrayKey = @"kBRTabelewHeaderConte
 static NSString *kBRTabelewHeaderStrechAutoFitFrameKey = @"kBRTabelewHeaderStrechAutoFitFrameKey";
 
 static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHadAddKvoKey";
+static NSString * BRStretchHeaderContextKey = @"BRStretchHeaderContextKey";
 
 @interface UIScrollView()
 @property (nonatomic, assign) CGRect beforeFrame;
@@ -28,24 +29,8 @@ static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHa
 @implementation UIScrollView (BRStretchHeaderView)
 
 
-+(void)load {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        NSString *deallocString = @"dealloc";
-        SEL sel = NSSelectorFromString(deallocString);
-        Method fromMethod = class_getInstanceMethod([self class], sel);
-        Method toMethod = class_getInstanceMethod([self class], @selector(br_dealloc));
 
-        method_exchangeImplementations(fromMethod, toMethod);
-
-    });
-    
-}
-- (void)br_dealloc
-{
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
+-(void)willRemoveSubview:(UIView *)subview {
     
     if (self.hadAddKvo) {
         @try {
@@ -57,13 +42,9 @@ static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHa
         } @finally {
             
         }
-
+        
     }
-  
-  
 }
-
-
 
 - (void)BR_addStrechHeaderView:(UIView *)headerView {
     
@@ -80,17 +61,16 @@ static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHa
     //这里延迟，因为 调用 setContentOffset 会 引起 kBRcontentOffsetY 的变化。
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-        [self addObserver:self forKeyPath:kBRcontentOffsetY options:NSKeyValueObservingOptionNew context:nil];
+        [self addObserver:self forKeyPath:kBRcontentOffsetY options:NSKeyValueObservingOptionNew context:&BRStretchHeaderContextKey];
         
         self.hadAddKvo = YES;
     });
-    
     self.br_headerViewHeight = frame.size.height;
     
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void *)context {
     
-    if ([keyPath isEqualToString:kBRcontentOffsetY] ) {
+    if ([keyPath isEqualToString:kBRcontentOffsetY] && context == &BRStretchHeaderContextKey) {
         
         [self br_scrollViewDidScroll:self];
         
@@ -175,7 +155,7 @@ static NSString *kBRTabelewHeaderStrechHadAddKvoKey = @"kBRTabelewHeaderStrechHa
 -(BRStretchHeaderStrechType)br_strechType {
     
     NSNumber *number = objc_getAssociatedObject(self, &kBRTabelewHeaderStrechAutoFitFrameKey);
-    return  number.boolValue;
+    return  number.integerValue;
     
 }
 -(void)setBr_strechType:(BRStretchHeaderStrechType)br_strechType {
